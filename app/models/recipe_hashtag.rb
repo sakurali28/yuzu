@@ -1,0 +1,2 @@
+class RecipeHashtag < ApplicationRecord
+end
