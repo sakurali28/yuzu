@@ -1,0 +1,8 @@
+{
+  id: recipe.id,
+  title: recipe.title,
+  cooktime: recipe.cooktime,
+  image: recipe.image,
+  ingredient: recipe.ingredient,
+  direction: recipe.direction,
+}
