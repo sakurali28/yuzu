@@ -5,5 +5,10 @@
   image: recipe.image,
   ingredient: recipe.ingredient,
   direction: recipe.direction,
-  tag: recipe.hashtags,
+  tag: recipe.hashtags.map do |hashtag|
+    {
+      id: hashtag.id,
+      tag: hashtag.tag,
+    }
+  end,
 }

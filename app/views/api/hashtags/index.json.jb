@@ -1,0 +1,3 @@
+@hashtags.map do |hashtag|
+  render partial: "hashtag.json.jb", locals: { hashtag: hashtag }
+end

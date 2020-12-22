@@ -1,0 +1,1 @@
+render partial: "hashtag.json.jb", locals: { hashtag: @hashtag }

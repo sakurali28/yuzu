@@ -1,0 +1,5 @@
+{
+  id: hashtag.id,
+  tag: hashtag.tag,
+  recipes: hashtag.recipes,
+}
