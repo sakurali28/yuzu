@@ -20,20 +20,20 @@ class Api::UsersController < ApplicationController
     render "show.json.jb"
   end
 
-  # def update
-  #   @user = current_user
+  def update
+    @user = current_user
 
-  #   @user.username = params[:username] || @user.username
-  #   @user.email = params[:email] || @user.email
-  #   @user.password = params[:password] || @user.password
-  #   @user.password_confirmation = params[:password_confirmation] || @user.password_confirmation
+    @user.name = params[:name] || @user.name
+    @user.email = params[:email] || @user.email
+    @user.password = params[:password] || @user.password
+    @user.password_confirmation = params[:password_confirmation] || @user.password_confirmation
 
-  #   if @user.save
-  #     render "show.json.jb"
-  #   else
-  #     render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
-  #   end
-  # end
+    if @user.save
+      render "show.json.jb"
+    else
+      render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
 
   # def destroy
   #   @user = current_user
