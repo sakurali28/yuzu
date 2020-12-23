@@ -1,14 +1,10 @@
 {
   id: recipe.id,
+  user_id: recipe.user_id,
   title: recipe.title,
   cooktime: recipe.cooktime,
   image: recipe.image,
   ingredient: recipe.ingredient,
   direction: recipe.direction,
-  tag: recipe.hashtags.map do |hashtag|
-    {
-      id: hashtag.id,
-      tag: hashtag.tag,
-    }
-  end,
+  tag: recipe.hashtags,
 }
