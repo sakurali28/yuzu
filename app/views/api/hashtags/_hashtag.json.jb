@@ -1,6 +1,0 @@
-{
-  id: hashtag.id,
-  user_id: hashtag.user_id,
-  tag: hashtag.tag,
-  recipes: hashtag.recipes,
-}

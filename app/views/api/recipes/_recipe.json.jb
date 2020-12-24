@@ -1,10 +1,12 @@
 {
   id: recipe.id,
   user_id: recipe.user_id,
-  title: recipe.title,
-  cooktime: recipe.cooktime,
+  name: recipe.name,
   image: recipe.image,
-  ingredient: recipe.ingredient,
-  direction: recipe.direction,
-  tag: recipe.hashtags,
+  servings: recipe.servings,
+  cooktime: recipe.cooktime,
+  ingredients: recipe.ingredients,
+  directions: recipe.directions,
+  notes: recipe.notes,
+  tag: recipe.tags,
 }

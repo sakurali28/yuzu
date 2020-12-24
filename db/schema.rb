@@ -10,32 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_18_210333) do
+ActiveRecord::Schema.define(version: 2020_12_24_025414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "hashtags", force: :cascade do |t|
-    t.string "tag"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
-  end
-
-  create_table "recipe_hashtags", force: :cascade do |t|
+  create_table "recipe_tags", force: :cascade do |t|
     t.integer "recipe_id"
-    t.integer "hashtag_id"
+    t.integer "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.string "title"
-    t.integer "cooktime"
-    t.string "image"
-    t.string "ingredient"
-    t.string "direction"
     t.integer "user_id"
+    t.string "name"
+    t.string "image"
+    t.string "servings"
+    t.integer "cooktime"
+    t.string "ingredients"
+    t.string "directions"
+    t.string "notes"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

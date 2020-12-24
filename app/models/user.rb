@@ -4,5 +4,6 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { in: 8..20 }, confirmation: true
 
   has_many :recipes
-  has_many :hashtags
+  has_many :tags
+  has_many :recipe_tags
 end

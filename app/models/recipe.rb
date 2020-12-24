@@ -1,10 +1,10 @@
 class Recipe < ApplicationRecord
-  validates :title, presence: true
-  validates :ingredient, presence: true
-  validates :direction, presence: true
+  validates :name, presence: true
+  validates :ingredients, presence: true
+  validates :directions, presence: true
   validates :cooktime, numericality: { greater_than: 0 }
 
   belongs_to :user
-  has_many :recipe_hashtags
-  has_many :hashtags, through: :recipe_hashtags
+  has_many :recipe_tags, dependent: :destroy
+  has_many :tags, through: :recipe_tags
 end

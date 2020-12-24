@@ -13,11 +13,11 @@ Rails.application.routes.draw do
     patch "/recipes/:id" => "recipes#update"
     delete "/recipes/:id" => "recipes#destroy"
 
-    get "/hashtags" => "hashtags#index"
-    get "/hashtags/:id" => "hashtags#show"
-    post "/hashtags" => "hashtags#create"
-    patch "/hashtags/:id" => "hashtags#update"
-    delete "/hashtags/:id" => "hashtags#destroy"
+    get "/tags" => "tags#index"
+    get "/tags/:id" => "tags#show"
+    post "/tags" => "tags#create"
+    patch "/tags/:id" => "tags#update"
+    delete "/tags/:id" => "tags#destroy"
 
     post "/recipe_hashtags" => "recipe_hashtags#create"
   end
