@@ -35,10 +35,10 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @user = current_user
+  def destroy
+    @user = current_user
 
-  #   @user.destroy
-  #   render json: { message: "Your account has been deleted! We'll miss you!" }
-  # end
+    @user.destroy
+    render json: { message: "Your account has been deleted! We'll miss you!" }
+  end
 end
