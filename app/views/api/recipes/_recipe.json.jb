@@ -5,6 +5,7 @@
   image: recipe.image,
   servings: recipe.servings,
   cooktime: recipe.cooktime,
+  cooktime_conversion: recipe.cooktime_conversion,
   ingredients: recipe.ingredients,
   directions: recipe.directions,
   notes: recipe.notes,
