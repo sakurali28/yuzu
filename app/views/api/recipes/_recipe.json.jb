@@ -10,4 +10,5 @@
   directions: recipe.directions,
   notes: recipe.notes,
   tag: recipe.tags,
+  recipe_tags: recipe.recipe_tags,
 }

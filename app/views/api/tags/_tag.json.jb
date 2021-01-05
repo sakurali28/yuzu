@@ -3,4 +3,5 @@
   user_id: tag.user_id,
   name: tag.name,
   recipes: tag.recipes,
+  recipe_tag: tag.recipe_tags,
 }

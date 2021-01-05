@@ -13,6 +13,7 @@ class Api::TagsController < ApplicationController
 
   def create
     @tag = Tag.new({
+      user_id: current_user.id,
       name: params[:name],
     })
     if @tag.save
@@ -34,7 +35,7 @@ class Api::TagsController < ApplicationController
   end
 
   def destroy
-    @tag = Tag.find_by(params["id"])
+    @tag = Tag.find(params[:id])
     @tag.destroy
     render json: { message: "Tag deleted!" }
   end
