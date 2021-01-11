@@ -1,0 +1,1 @@
+render partial: "bookmark.json.jb", locals: { bookmark: @bookmark }

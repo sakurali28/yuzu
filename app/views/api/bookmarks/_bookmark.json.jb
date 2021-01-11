@@ -1,0 +1,6 @@
+{
+  id: bookmark.id,
+  user_id: bookmark.user_id,
+  name: bookmark.name,
+  url: bookmark.url,
+}
