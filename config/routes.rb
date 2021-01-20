@@ -28,4 +28,6 @@ Rails.application.routes.draw do
     patch "/bookmarks/:id" => "bookmarks#update"
     delete "/bookmarks/:id" => "bookmarks#destroy"
   end
+
+  get "/*path" => proc { [200, {}, [ActionView::Base.new.render(file: "public/index.html")]] }
 end

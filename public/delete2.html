@@ -1,0 +1,63 @@
+<div id="wrapper" class="clearfix">
+
+  <!-- Content============================================= -->
+  <section id="content">
+    <div class="content-wrap bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-md-10">
+            <div class="card my-5 shadow-sm">
+              <div class="card-body p-5">
+                <h4 class="ls4 center">SIGNUP FORM</h4>
+                <div class="divider divider-sm divider-center text-dark"><i class="icon-heart21"></i></div>
+                <div class="form-widget" data-alert-type="false">
+                  <form v-on:submit.prevent="submit()">
+                    <div class="row">
+                      <div class="col-12 center mb-5">
+                        <h2 class="font-secondary h1">Let's Get Started</h2>
+                        <h6 class="font-body text-uppercase ls3">Shall We?</h6>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-md-6 bottommargin-sm">
+                            <label>Name<small class="text-danger">*</small></label>
+                            <input type="text" class="form-control" placeholder="Enter your Name" v-model="name">
+                          </div>
+
+                          <div class="col-md-6 bottommargin-sm">
+                            <label>Email<small class="text-danger">*</small></label>
+                            <input type="email" class="form-control" placeholder="Enter your Email" v-model="email">
+                          </div>
+
+                          <div class="col-md-6 bottommargin-sm">
+                            <label>Password<small class="text-danger">*</small></label>
+                            <input type="password" class="form-control" placeholder="Enter your Password" v-model="password">
+                          </div>
+
+                          <div class="col-md-6 bottommargin-sm">
+                            <label>Password Confirmation<small class="text-danger">*</small></label>
+                            <input type="password" class="form-control" placeholder="Enter your Password again" v-model="passwordConfirmation">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <button type="submit" class="button button-large button-circle button-border">create an account</button>
+                        <router-link v-bind:to="`/`">
+                          <button class="button button-large button-circle button-border">cancel</button>
+                        </router-link>
+                      </div>
+                      
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- #content end -->
+
+</div>

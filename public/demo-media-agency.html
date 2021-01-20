@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+
+	<!-- Media Agency Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="demos/media-agency/media-agency.css" type="text/css" />
+	<!-- / -->
+
+	<title>Media Agency | Canvas</title>
+
+</head>
+
+
+
+  <!-- Document Wrapper============================================= -->
+  <div id="wrapper" class="clearfix">
+    
+    <!-- Content============================================= -->
+    <section id="content">
+      <div class="content-wrap">
+        <div id="section-about" class="container-fluid page-section clearfix">
+          <div id="section-contact" >
+            <h3>login.</h3>
+            <div class="form-widget">
+
+              <form v-on:submit.prevent="submit()" class="row mb-0">
+
+                <div class="col-md-6 form-group">
+                  <input type="email" v-model="email" class="required sm-form-control border-form-control" placeholder="Email Address" />
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <input type="password" v-model="password" class="required sm-form-control border-form-control" placeholder="Password" />
+                </div>
+
+                <div class="clear"></div>
+
+                <!-- <div class="col-12 form-group">
+                  <input type="text" id="template-contactform-subject" name="subject" value="" class="required sm-form-control border-form-control" placeholder="Subject" />
+                </div> -->
+
+                <!-- <div class="col-12 form-group">
+                  <textarea class="required sm-form-control border-form-control" id="template-contactform-message" name="template-contactform-message" rows="7" cols="30" placeholder="Your Message"></textarea>
+                </div> -->
+
+                <input type="submit" class="button button-circle button-border" value="log in">
+                <router-link v-bind:to="`/`">
+                  <button class="button button-circle button-border">cancel</button>
+                </router-link>
+
+              </form>
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
