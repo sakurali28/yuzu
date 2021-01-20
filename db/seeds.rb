@@ -1,97 +1,76 @@
-# User.create!([
-#   {
-#     name: "Lisa",
-#     email: "lisa@example.com",
-#     password: "password",
-#   },
-#   {
-#     name: "Miharu",
-#     email: "miharu@example.com",
-#     password: "password",
-#   },
-# ])
-
-# Recipe.create!([
-#   {
-#     user_id: 1,
-#     name: "Banana Bread",
-#     servings: 12,
-#     image: "https://images.101cookbooks.com/banana-bread-recipe-2019-h.jpg?w=680",
-#     cooktime: 35,
-#     ingredients: "140g all purpose flour, 50g almond meal,
-#     100g cane sugar, 1tsp baking powder, 1stick of butter, 2 eggs, 300g bananas",
-#     directions: "combine all dry ingredients, combine all wet ingredients, mix the dry and the wet, bake at 350F for 30min",
-#   },
-#   {
-#     user_id: 1,
-#     servings: 12,
-#     name: "Lemon Pound Cake",
-#     image: "https://www.seasonsandsuppers.ca/wp-content/uploads/2017/05/lemon-loaf800E.jpg",
-#     cooktime: 40,
-#     ingredients: "100g all purpose flour, 20g almond meal, 80g cane sugar, 1tsp baking powder, 1 stick of butter, 2 eggs, 2tbsp honey, 1.5tbsp lemon juice, 1 lemon worth of zest",
-#     directions: "combine all dry ingredients, combine all wet ingredients, mix the dry and the wet, bake at 165C for 35min",
-#   },
-#   {
-#     user_id: 1,
-#     name: "Ni Kabocha",
-#     servings: 3 - 4,
-#     image: "https://www.justonecookbook.com/wp-content/uploads/2019/09/Simmered-Kabocha-5770-I-500x375.jpg",
-#     cooktime: 10,
-#     ingredients: "400g kabocha, 2tbsp cane sugar, 1tbsp mirin, 1tsp soy sauce",
-#     directions: "simmer on medium heat for 5min",
-#   },
-#   {
-#     user_id: 1,
-#     name: "Annin Tofu",
-#     servings: 4,
-#     image: "https://www.kawalingpinoy.com/wp-content/uploads/2014/12/almond-jello-7.jpg",
-#     cooktime: 15,
-#     ingredients: "500ml milk, 2tbsp cane sugar, 1tsp almond essence, 2tsp agar agar or 8g gelatin",
-#     directions: "disolve gelatin in warm water, mix everything together, bring to a boil on medium heat, let it cool to be placed in fridge",
-#   },
-#   {
-#     user_id: 2,
-#     name: "Cranberry Sauce",
-#     image: "https://www.lifeisbutadish.com/wp-content/uploads/2019/11/4-Ingredient-Homemade-Cranberry-Sauce-3.jpg",
-#     cooktime: 15,
-#     ingredients: "350g fresh cranberries, 150g cane sugar, 100g orange juice, 1tsp lemon zest",
-#     directions: "simmer ingredients together on medium heat",
-#   },
-#   {
-#     user_id: 1,
-#     name: "Nasu to hikiniku itame",
-#     image: "https://img.cpcdn.com/recipes/1203423/750x500cq60/5366e8579ce9c6ca4bb7d19066c1161e?p=1428328336",
-#     cooktime: 15,
-#     ingredients: "minced meat, chicken stock, chili sauce, eggplant,oyster sauce, hoisin sauce",
-#     directions: "add chicken stock to minced meat, simmer eggplant with oyster sauce, hoisin sauce, and chili sauce",
-#   },
-#   {
-#     user_id: 1,
-#     name: "Chocolate Dipped Matcha Shortbread Cookies",
-#     image: "https://images.food52.com/RT6w8xJkYUvOuzTcmEerMlUBfVk=/1320x880/filters:format(webp)/96c705e7-3529-4f70-b86a-392e5fa6d159--IMG_0113a.jpg",
-#     cooktime: 20,
-#     ingredients: "2cups all purpose flour, 2tbsp matcha powder, 1cup salted butter, 0.5cup powdered sugar, 200g dark chocolate, 1tsp vegetable oil",
-#     directions: "sift flour and matcha into bowl, cream butter and powdered sugar in a separate bowl until light and fluffy, mix the two bowl contents together, gather dough and form a disc to cover with plastic wrap and refrigerate for 30 minutes to chill, roll out dough on floured surface to 0.25in thickness, cut into rounds, place onto baking sheets in the refrigerator for 15minutes, bake cookies for 10 to 12 minutes at 350F, let the cookies cool, combine melted chocolate with oil, dip cookies in chocolate and drain off excess, refrigerate for 10 minutes. dust with matcha powder",
-#   },
-# ])
-
-# Tag.create!([
-#   { user_id: "1", name: "dessert" },
-#   { user_id: "1", name: "asian" },
-#   { user_id: "1", name: "cookie" },
-#   { user_id: "2", name: "soup" },
-#   { user_id: "2", name: "pasta" },
-#   { user_id: "2", name: "condiment" },
-# ])
-
-# RecipeTag.create!([
-#   { recipe_id: 1, tag_id: 1 },
-#   { recipe_id: 2, tag_id: 1 },
-#   { recipe_id: 3, tag_id: 2 },
-#   { recipe_id: 4, tag_id: 1 },
-#   { recipe_id: 4, tag_id: 2 },
-#   { recipe_id: 5, tag_id: 6 },
-#   { recipe_id: 6, tag_id: 2 },
-#   { recipe_id: 7, tag_id: 1 },
-#   { recipe_id: 7, tag_id: 3 },
-# ])
+Tag.create!([
+  {user_id: 2, name: "soup"},
+  {user_id: 2, name: "pasta"},
+  {user_id: 2, name: "condiment"},
+  {user_id: 1, name: "dessert"},
+  {user_id: 2, name: nil},
+  {user_id: 1, name: "asian"},
+  {user_id: 1, name: "cookie"},
+  {user_id: 1, name: "condiment"},
+  {user_id: 1, name: "soup"},
+  {user_id: 1, name: "dinner"},
+  {user_id: 1, name: "korean"}
+])
+Recipe.create!([
+  {user_id: 1, name: "Banana Bread", image: "https://images.101cookbooks.com/banana-bread-recipe-2019-h.jpg?w=680", servings: "12", cooktime: 35, ingredients: "140g all purpose flour, 50g almond meal,\n    100g cane sugar, 1tsp baking powder, 1stick of butter, 2 eggs, 300g bananas", directions: "combine all dry ingredients, combine all wet ingredients, mix the dry and the wet, bake at 350F for 30min", notes: nil},
+  {user_id: 1, name: "Lemon Pound Cake", image: "https://www.seasonsandsuppers.ca/wp-content/uploads/2017/05/lemon-loaf800E.jpg", servings: "12", cooktime: 40, ingredients: "100g all purpose flour, 20g almond meal, 80g cane sugar, 1tsp baking powder, 1 stick of butter, 2 eggs, 2tbsp honey, 1.5tbsp lemon juice, 1 lemon worth of zest", directions: "combine all dry ingredients, combine all wet ingredients, mix the dry and the wet, bake at 165C for 35min", notes: nil},
+  {user_id: 1, name: "Annin Tofu", image: "https://www.kawalingpinoy.com/wp-content/uploads/2014/12/almond-jello-7.jpg", servings: "4", cooktime: 15, ingredients: "500ml milk, 2tbsp cane sugar, 1tsp almond essence, 2tsp agar agar or 8g gelatin", directions: "disolve gelatin in warm water, mix everything together, bring to a boil on medium heat, let it cool to be placed in fridge", notes: nil},
+  {user_id: 1, name: "Nasu to hikiniku itame", image: "https://img.cpcdn.com/recipes/1203423/750x500cq60/5366e8579ce9c6ca4bb7d19066c1161e?p=1428328336", servings: nil, cooktime: 15, ingredients: "minced meat, chicken stock, chili sauce, eggplant,oyster sauce, hoisin sauce", directions: "add chicken stock to minced meat, simmer eggplant with oyster sauce, hoisin sauce, and chili sauce", notes: nil},
+  {user_id: 1, name: "Ama Miso", image: "https://v1.nitrocdn.com/KQYMGOLIdXGmoAcyJsPOrQDKktgCbwtG/assets/static/source/rev-97d867a/wp-content/uploads/2020/08/All-Purpose-Miso-Sauce-7263-II.jpg", servings: "10-12", cooktime: 5, ingredients: "100 g dark miso, 200 g mirin, 50 g brown sugar", directions: "simmer for 5 minutes", notes: "add minced pork"},
+  {user_id: 2, name: "Cranberry Sauce", image: "https://www.lifeisbutadish.com/wp-content/uploads/2019/11/4-Ingredient-Homemade-Cranberry-Sauce-3.jpg", servings: "6-10", cooktime: 15, ingredients: "350g fresh cranberries, 150g cane sugar, 100g orange juice, 1tsp lemon zest", directions: "simmer ingredients together on medium heat", notes: nil},
+  {user_id: 1, name: "Cranberry Sauce", image: "https://images.unsplash.com/photo-1530860230002-bb67fbabe1ea?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzd8fGNyYW5iZXJyeXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", servings: "10-12", cooktime: 10, ingredients: "350 g fresh cranberries, 150 g cane sugar or brown sugar, 100 g orange juice, 1 tsp lemon zest", directions: "simmer for 8 minutes", notes: "orange juice is optional!"},
+  {user_id: 1, name: "Oatmeal Raisin Cookies", image: "https://images.unsplash.com/photo-1598968333180-9b4f6bc2bf52?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8b2F0bWVhbCUyMHJhaXNpbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", servings: "10-12", cooktime: 20, ingredients: "2 sticks of butter, 2 eggs, 3/4 cups brown sugar, 3/4 cups cane sugar, 1 tsp vanilla extract, , 1.5 cups all purpose flour, 1 tsp baking powder, 1 tsp cinnamon, 1.5 cups nuts, 1.5 cups raisin, 3 cups oatmeal", directions: "bake at 350F for 15-20min", notes: "pumpkin seeds are a good option!"},
+  {user_id: 1, name: "Chocolate Dipped Matcha Shortbread Cookies", image: "https://images.food52.com/RT6w8xJkYUvOuzTcmEerMlUBfVk=/1320x880/filters:format(webp)/96c705e7-3529-4f70-b86a-392e5fa6d159--IMG_0113a.jpg", servings: "35-40", cooktime: 20, ingredients: "2 cups all purpose flour, 2 tbsp matcha powder, 1 cup salted butter, 1/2 cup powdered sugar, 200 g dark chocolate, 1 tsp vegetable oil", directions: "sift flour and matcha into bowl, cream butter and powdered sugar in a separate bowl until light and fluffy, mix the two bowl contents together, gather dough and form a disc to cover with plastic wrap and refrigerate for 30 minutes, roll out dough on floured surface to 0.25in thickness, cut into rounds, place onto baking sheets in the refrigerator for 15minutes, bake cookies for 10 to 12 minutes at 350F, let the cookies cool, combine melted chocolate with oil, dip cookies in chocolate and drain off excess, refrigerate for 10 minutes. dust with matcha powder", notes: "alternatively: roll up the dough, refrigerate, then cut!"},
+  {user_id: 1, name: "Ni Kabocha", image: "https://www.justonecookbook.com/wp-content/uploads/2019/09/Simmered-Kabocha-5770-I-500x375.jpg", servings: "2-4", cooktime: 10, ingredients: "400g kabocha, 2tbsp cane sugar, 1tbsp mirin, 1tsp soy sauce", directions: "simmer on medium heat for 5min", notes: "round the edges and corners!"},
+  {user_id: 1, name: "Kabocha Soup", image: "https://images.unsplash.com/photo-1544681280-d25a782adc9b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fHB1bXBraW4lMjBzb3VwfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", servings: "10-12", cooktime: 20, ingredients: "1/2 kabocha, 2 cups milk, 1 cube chicken stock, 10 g butter, black pepper", directions: "remove seeds inside kabocha, steam kabocha for 15 min, scoop the meat into blender, season", notes: "add some pumpkin seeds or drizzle some sour cream on top!"},
+  {user_id: 1, name: "Asparagus Risotto", image: "https://images.unsplash.com/photo-1476124369491-e7addf5db371?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8cmlzb3R0b3xlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=800&q=60", servings: "4-6", cooktime: 10, ingredients: "1/2 cup asparagus, 1 cup arborio rice, 2.5 cups water, 1/2 cup chopped onion, 2 cloves of garlic, 1 chicken stock cube, 1 tsp olive oil, 1/4 cup parmesan, 2 tbsp lemon juice", directions: "cook on high 6 min, leave lid on for 2 min", notes: ""},
+  {user_id: 1, name: "Castella Pudding", image: "data:image/jpeg;base64,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", servings: "4", cooktime: 30, ingredients: "PUDDING, 60 g cane sugar, 3 large eggs, 1 large egg yolk, 320 cc warm milk, CARAMEL SAUCE, 70 g cane sugar, 2 tbsp water, 2 tbsp hot water, CASTELLA, 1 whole egg, 25g cane sugar, 10 g honey, 30 g cake flour", directions: "create the caramel sauce and pour into cup, pour the pudding into cup, then the castella", notes: "castella on bottom is an option too!"},
+  {user_id: 1, name: "Chocolate Cake", image: "https://images.unsplash.com/photo-1603194202969-12a5dbd29d34?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzB8fGNob2NvbGF0ZSUyMGNha2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60", servings: "6-8", cooktime: 35, ingredients: "6 eggs, 65 g cake flour, 15 g cocoa powder, 20 g honey, 100 g cane sugar", directions: "bake at 170C for 28-30 min", notes: ""},
+  {user_id: 1, name: "Basque Cheesecake", image: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/5/13/0/FNK_Basque-Style-Cheesecake_H1_s4x3.jpg.rend.hgtvcom.826.620.suffix/1557773606121.jpeg", servings: "6-8", cooktime: 50, ingredients: "2 sticks of cream cheese (450g), 4-5 eggs(240g), 300 g heavy cream, 120 g cane sugar, 2 tbsp all purpose flour", directions: "crumple baking sheet, bake at 210C for 40 min", notes: ""},
+  {user_id: 1, name: "Chiffon Cake", image: "https://images.unsplash.com/photo-1597334131807-b7031c30e2fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80", servings: "6-8", cooktime: 35, ingredients: "75 g cake flour, 4 egg yolk, 4 egg white, 80 g cane sugar, 40 g vegetable oil, 50 g warm water, pinch of cream of tartar", directions: "bake at 170 C for 25 min", notes: "add 5 g hojicha!"},
+  {user_id: 1, name: "DeopBap", image: "https://images.food52.com/daFijW7AdhKN5-js9MUi8DXZM9w=/1320x880/filters:format(webp)/2b91076e-c7e9-420d-a31a-ed1bce6ee80d--2020-0909_spam-egg-rice-recipe_3x2_julia-gartland_167.jpg", servings: "1-2", cooktime: 25, ingredients: "1/2 cup rice, 3 tsp toasted sesame oil, 2 oz diced spam, 1/2 tsp garlic powder, 1 tsp maple syrup, 2 large eggs, 1 pinch kosher salt / black pepper, 2 tbsp kewpie mayo, 1/4 tsp soy sauce, 2 sheets gim", directions: "cook the rice with either rice-cooker or stovetop, dice and fry spam on medium-high heat with sesame oil and garlic powder until brown, add maple syrup until bubbles form and reduces and candies, remove from heat and set aside, scramble eggs with salt and pepper, cook over medium heat with sesame oil, combine 1 tsp sesame oil and 1 tsp soy sauce and 1/4 garlic powder and mayo in a bowl, place rice on bottom then add the scrambled eggs and spam, drizzle the sauce and top with chopped gim, serve and enjoy", notes: "sweeten the eggs or candy the spam, try adding sesame oil to the rice"}
+])
+Bookmark.create!([
+  {user_id: 1, name: "Brothy Bean Soup", url: "https://food52.com/recipes/84770-best-bean-soup-recipe"},
+  {user_id: 1, name: "Vanilla Poundcake", url: "https://food52.com/recipes/84768-best-pound-cake-recipe"},
+  {user_id: 1, name: "Spam & Egg Deopbap", url: "https://food52.com/recipes/84620-best-deopbap-recipe-with-spam-egg"},
+  {user_id: 1, name: "Addictive Asparagus", url: "Absurdly Addictive Asparagus"},
+  {user_id: 1, name: "Squash & Chickpea Salad", url: "https://food52.com/recipes/26165-moro-s-warm-squash-chickpea-salad-with-tahini"},
+  {user_id: 1, name: "Red Lentil Dal", url: "https://food52.com/recipes/25419-a-simple-homey-coconut-y-red-lentil-dal"},
+  {user_id: 1, name: "Cauliflower Couscous", url: "https://food52.com/recipes/21165-spice-merchant-cauliflower-couscous"},
+  {user_id: 1, name: "Creamy Chicken Curry", url: "https://food52.com/recipes/11867-cheap-creamy-chicken-curry"},
+  {user_id: 1, name: "Yam & Peanut Stew", url: "https://food52.com/recipes/19854-yam-and-peanut-stew-with-kale"}
+])
+RecipeTag.create!([
+  {recipe_id: 1, tag_id: 1},
+  {recipe_id: 2, tag_id: 1},
+  {recipe_id: 3, tag_id: 2},
+  {recipe_id: 4, tag_id: 1},
+  {recipe_id: 4, tag_id: 2},
+  {recipe_id: 5, tag_id: 6},
+  {recipe_id: 6, tag_id: 2},
+  {recipe_id: 7, tag_id: 3},
+  {recipe_id: 5, tag_id: 8},
+  {recipe_id: 5, tag_id: 8},
+  {recipe_id: 7, tag_id: 1},
+  {recipe_id: 9, tag_id: 67},
+  {recipe_id: 11, tag_id: 1},
+  {recipe_id: 10, tag_id: 2},
+  {recipe_id: 10, tag_id: 67},
+  {recipe_id: 12, tag_id: 1},
+  {recipe_id: 12, tag_id: 3},
+  {recipe_id: 13, tag_id: 68},
+  {recipe_id: 15, tag_id: 1},
+  {recipe_id: 16, tag_id: 1},
+  {recipe_id: 17, tag_id: 1},
+  {recipe_id: 19, tag_id: 2},
+  {recipe_id: 19, tag_id: 70},
+  {recipe_id: 19, tag_id: 69}
+])
+User.create!([
+  {name: "Lisa", email: "lisa@example.com", password_digest: "$2a$12$g7H4dlpB7HNN3HW9M.6dCueUe4G5JwSIwfj8WA.LIHRvr89I6Kifu"},
+  {name: "Miharu", email: "miharu@example.com", password_digest: "$2a$12$dk.pI/JFvjS2NUlK2Ivqdunnf2OmXUsjQxo/6SLmOujSEUlz8xe9y"},
+  {name: "Taiki", email: "taiki@example.com", password_digest: "$2a$12$1c2rXT8OyJy6QEyUCEodyunO1fYkjM6TXvdVBzoz/rRzXkJopENf."},
+  {name: "delete", email: "delete@example.com", password_digest: "$2a$12$lKI0l4u1IRvQp2cUcU2RzuBZwQ/aBehCq9kxrERo1E0rMmb8CPjCi"},
+  {name: "delete2", email: "delete2@example.com", password_digest: "$2a$12$nYLExu.K5VDQb27I6Vrxl..Ku9fcAV6bHHzweR8t9739FfH1oSnOK"}
+])
